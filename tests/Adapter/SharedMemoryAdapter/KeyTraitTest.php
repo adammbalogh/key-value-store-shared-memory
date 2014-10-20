@@ -89,7 +89,7 @@ class KeyTraitTest extends AbstractKvsSharedMemoryTestCase
     {
         $this->assertFalse($this->kvs->persist('key'));
     }
-    
+
     public function testPersistError()
     {
         $this->kvs->set('key', 'value');
