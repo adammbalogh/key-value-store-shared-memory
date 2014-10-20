@@ -89,15 +89,12 @@ class KeyTraitTest extends AbstractKvsSharedMemoryTestCase
     {
         $this->assertFalse($this->kvs->persist('key'));
     }
-
-    /**
-     * @expectedException \Exception
-     */
+    
     public function testPersistError()
     {
         $this->kvs->set('key', 'value');
 
-        $this->assertTrue($this->kvs->persist('key'));
+        $this->assertFalse($this->kvs->persist('key'));
     }
 
     public function testPersistExpired()

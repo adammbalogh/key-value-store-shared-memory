@@ -39,6 +39,8 @@ trait KeyTrait
      * @param int $seconds
      *
      * @return bool True if the timeout was set, false if the timeout could not be set.
+     *
+     * @throws \Exception
      */
     public function expire($key, $seconds)
     {
@@ -83,6 +85,8 @@ trait KeyTrait
      * @param string $key
      *
      * @return bool True if the key does exist, false if the key does not exist.
+     *
+     * @throws \Exception
      */
     public function has($key)
     {
@@ -115,7 +119,7 @@ trait KeyTrait
         $unserialized = @unserialize($getResult);
 
         if (!Util::hasInternalExpireTime($unserialized)) {
-            throw new \Exception("{$key} has no associated timeout");
+            return false;
         }
 
         try {

@@ -16,6 +16,7 @@ trait ValueTrait
      * @return mixed The value of the key.
      *
      * @throws KeyNotFoundException
+     * @throws \Exception
      */
     public function get($key)
     {
@@ -49,6 +50,7 @@ trait ValueTrait
      * @return mixed
      *
      * @throws KeyNotFoundException
+     * @throws \Exception
      */
     protected function getValue($key)
     {
