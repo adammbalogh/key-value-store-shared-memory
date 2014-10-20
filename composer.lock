@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "05b20138d2d52e56885019661db474eb",
+    "hash": "f55a52b7075ed9720a12516cfdbd4dde",
     "packages": [
         {
             "name": "adammbalogh/key-value-store",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adammbalogh/key-value-store.git",
-                "reference": "74b058eb48880ea97622b1f63f3259b35b122a6c"
+                "reference": "510a385a1be08e0ee8987c2bbd6dd25ea8b90571"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/74b058eb48880ea97622b1f63f3259b35b122a6c",
-                "reference": "74b058eb48880ea97622b1f63f3259b35b122a6c",
+                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/510a385a1be08e0ee8987c2bbd6dd25ea8b90571",
+                "reference": "510a385a1be08e0ee8987c2bbd6dd25ea8b90571",
                 "shasum": ""
             },
             "require": {
@@ -33,8 +33,10 @@
             "suggest": {
                 "adammbalogh/key-value-store-file": "For using File storage",
                 "adammbalogh/key-value-store-memcached": "For using Memcached storage",
+                "adammbalogh/key-value-store-memory": "For using Memory storage",
                 "adammbalogh/key-value-store-null": "For using Null storage",
-                "adammbalogh/key-value-store-redis": "For using Redis storage"
+                "adammbalogh/key-value-store-redis": "For using Redis storage",
+                "adammbalogh/key-value-store-shared-memory": "For using Shared Memory storage"
             },
             "type": "library",
             "autoload": {
@@ -62,7 +64,7 @@
                 "store",
                 "value"
             ],
-            "time": "2014-10-15 22:09:46"
+            "time": "2014-10-20 17:22:20"
         }
     ],
     "packages-dev": [
