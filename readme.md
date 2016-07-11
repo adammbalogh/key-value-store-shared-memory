@@ -40,7 +40,13 @@ page to choose a stable version to use, avoid the `@stable` meta constraint.
 use AdammBalogh\KeyValueStore\KeyValueStore;
 use AdammBalogh\KeyValueStore\Adapter\SharedMemoryAdapter as Adapter;
 
-$adapter = new Adapter();
+$tmpFileName = tempnam('/tmp', 'KVS');
+$shmResource = shm_attach(ftok($tmpFileName, 'a'));
+if ( ! $shmResource) {
+    die('Unable to create the shared memory segment');
+}
+
+$adapter = new Adapter($shmResource);
 
 $kvs = new KeyValueStore($adapter);
 
